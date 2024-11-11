@@ -1,0 +1,236 @@
+/* the styles for the elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: white;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    margin: 0 auto;
+    background-color: #fffded;
+}
+a:focus, a:hover {
+    font-style: italic;
+}
+
+/* the styles for the header */
+header {
+    padding: 1.5em 0 2em 0;
+    border-bottom: 3px solid #000b50;
+    background-image: linear-gradient(
+        30deg, #A9F1DF 0%, #fffded 30%, #E4EfE9 50%, #fffded 80%, #A9F1DF 100%);
+}
+header h2 {
+    font-size: 175%;
+    color: #000b50;
+    font-family: fantasy;
+}
+header h3 {
+    font-size: 130%;
+    font-style: italic;
+}
+header img {
+    float: left;
+    padding: 0 30px;
+}
+.shadow {
+    text-shadow: 2px 2px 2px #000b50;
+}
+
+/* the styles for the main content */
+main {
+    clear: left;
+}
+
+/* the styles for the Nav Bar */
+.Out {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #A9F1DF;
+    color: #000b50;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium';
+}
+li a {
+    text-decoration: none;
+    color: #000b50;
+}
+li a:hover {
+    color: red;
+}
+.in li {
+    background-color: #A9F1DF;
+    padding: 20px 70px;
+    margin-left: -70px;
+}
+li {
+    list-style: none;
+    cursor: pointer;
+}
+.in {
+    margin-top: 10px;
+    position: absolute;
+    display: none;
+}
+.Out li:hover > ul {
+    display: block;
+}
+
+/* the styles for the section */
+span {
+    color: orange;
+}
+
+section {
+    width: 50%;
+    float: left;
+    padding: 0 20px 20px 50px;
+}
+section h1 {
+    font-size: 150%;
+    padding: .5em 0 .25em 0;
+    margin: 0; /* If you remove this, the margins in normalize.css will be applied. */
+}
+section h2 {
+    color: #000b50;
+    font-size: 130%;
+    padding: .5em 0 .25em 0;
+}
+section p {
+    padding-bottom: .5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+section blockquote {
+    padding: 0 2em;
+    font-style: italic;
+}
+section ul {
+    padding: 0 0 .25em 1.25em;
+}
+section li {
+    padding-bottom: .35em;
+}
+
+/* the styles for the article */
+article {
+    padding: .5em 0;
+}
+article p {
+    padding-left: 5px;
+    width: 65em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+article h1 {
+    padding-top: 0;
+    color: red;
+    text-align: center;
+    padding-left: 20em;
+}
+article h2 {
+    font-size: 105%;
+    padding-bottom: .25em;
+    text-align: center;
+    padding-left: 29em;
+}
+article img {
+    float: none;
+    margin: .5em 0 1em 1em;
+    padding-left: 50%;
+}
+
+/* the styles for the aside */
+aside {
+    width: 215px;
+    float: right;
+    padding: 0 0 20px 20px;
+}
+aside h2 {
+    color: #000b50;
+    font-size: 130%;
+    padding: .5em 0 .25em 0;
+}
+aside h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+}
+aside img {
+    padding-bottom: 1em;
+}
+
+/* the styles for the footer */
+footer {
+    background-image: linear-gradient(
+        30deg, #A9F1DF 0%, #fffded 30%, #E4EfE9 50%, #fffded 80%, #A9F1DF 100%);
+    clear: both;
+}
+footer p {
+    text-align: center;
+    color: rgb(20, 0, 109);
+    padding: 1em 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 420px) {
+    section {
+        width: 100%;
+        float: none;
+        padding: 0 10px;
+    }
+    header img {
+        float: left;
+        display: block;
+        margin: 0 auto;
+    }
+    .Out {
+        flex-direction:row;
+        align-items: center;
+    }
+    .Out li {
+        padding: 10px;
+        margin-left: 0;
+    }
+    article h1 {
+        padding-left: 0;
+    }
+    article h2 {
+        padding-left: 0;
+    }
+    article img{
+        padding-left: 5%;
+        width: 150px;
+        height: 150px;
+
+    }
+    article p{
+        width: 10px;
+    }
+    aside {
+        width: 100%;
+        float: none;
+        padding: 0 0 20px 0;
+    }
+}
+
+/* Additional Mobile Adjustments */
+@media (max-width: 420px) {
+    header h2 {
+        font-size: 150%;
+    }
+    header h3 {
+        font-size: 120%;
+    }
+    footer p {
+        font-size: 90%;
+    }
+    section h1, section h2 {
+        font-size: 120%;
+    }
+    article p {
+        width: auto; /* Let it take full width */
+    }
+}
